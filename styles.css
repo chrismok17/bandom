@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background-color: #afcbee;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+/* #content {
+    background-color: bisque;
+} */
+
+#newest-styles {
+    border: 2px solid black;
+    background-color: blue;
+}
+
+#exclusives {
+    border: 2px solid black;
+    background-color: bisque;
+}
+
+#catalogue {
+    border: 2px solid black;
+    background-color: #0e2544;
+}
+
+#wishlist-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.wishlist-item {
+    border: 1px solid black
+}
