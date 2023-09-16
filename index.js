@@ -8,12 +8,34 @@ const loadHomePage = () => {
     // Create the Newest Styles div
     const newestStyles = document.createElement('div');
     newestStyles.setAttribute('id', 'newest-styles')
-    newestStyles.innerHTML = '<h1>Our Newest Styles</h1>'
+
+    // Create and attach background image
+    const newestStylesImage = document.createElement('img');
+    newestStylesImage.setAttribute('id', 'newest-style-img');
+    newestStylesImage.src = '/images/newest_styles.jpg';
+    newestStyles.appendChild(newestStylesImage);
+
+    // Create and attach image text
+    const newestStylesText = document.createElement('div');
+    newestStylesText.setAttribute('class', 'centered-text')
+    newestStylesText.innerHTML = '<h1>OUR NEWEST STYLES</h1>';
+    newestStyles.appendChild(newestStylesText);
 
     // Create Exclusives div
     const exclusives = document.createElement('div');
     exclusives.setAttribute('id', 'exclusives')
-    exclusives.innerHTML = '<h1>Bandom Exclusives</h1>'
+    
+    // Create and attach background image
+    const exclusivesImage = document.createElement('img');
+    exclusivesImage.setAttribute('id', 'exclusives-img');
+    exclusivesImage.src = '/images/exclusives.jpg';
+    exclusives.appendChild(exclusivesImage);
+
+    // Create and attach image text
+    const exclusivesText = document.createElement('div');
+    exclusivesText.setAttribute('class', 'centered-text')
+    exclusivesText.innerHTML = '<h1>BANDOM EXCLUSIVES</h1>';
+    exclusives.appendChild(exclusivesText);
 
     // Create Wishlist div
     const wishlist = document.createElement('div');
