@@ -50,12 +50,17 @@ const loadHomePage = () => {
         const wishlistItem = document.createElement('div');
         wishlistItem.setAttribute('class', 'wishlist-item');
         wishlistItem.setAttribute('id', `item-${i}`)
+
+        // Attach link to image's id product page
+        const itemLink = document.createElement('a');
+        itemLink.href = `#/product?id=${i}`;
         
         // Attach appropriate image to each item
         const itemImage = document.createElement('img');
         itemImage.src = `images/wishlist${i}.jpg`;
-        wishlistItem.appendChild(itemImage)
-        
+
+        itemLink.appendChild(itemImage)
+        wishlistItem.appendChild(itemLink)
         wishlistItemContainer.appendChild(wishlistItem)
     };
     
