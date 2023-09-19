@@ -2,7 +2,7 @@ const loadProductPage = async (productID) => {
     const contentContainer = document.getElementById('content');
     contentContainer.innerHTML= '';
     
-    const response = await fetch('../data.json');
+    const response = await fetch('data.json');
     const products = await response.json();
     
     const product = products.find((item) => item.id === parseInt(productID));

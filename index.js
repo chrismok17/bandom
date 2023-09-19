@@ -26,13 +26,7 @@ const handleRouteChange = () => {
                 const productID = params.get('id');
                 loadProductPage(productID);
                 break
-            } else {
-                const contentContainer = document.getElementById('content');
-                const notFoundMessage = document.createElement('div');
-                notFoundMessage.textContent = 'Page Not Found';
-                contentContainer.innerHTML = ''; // Clear existing content
-                contentContainer.appendChild(notFoundMessage);
-            }
+            };
     };
 };
 
