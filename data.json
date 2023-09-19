@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "product_name": "Forever Black T-Shirt",
+        "price": 19.99,
+        "description": "A classic black T-shirt that never goes out of style.",
+        "image": "./images/wishlist1.jpg"
+    },
+    {
+        "id": 2,
+        "product_name": "Black Leather Jacket",
+        "price": 59.99,
+        "description": "Stay warm and stylish with this black leather jacket.",
+        "image": "./images/wishlist2.jpg"
+    },
+    {
+        "id": 3,
+        "product_name": "Pink Dress",
+        "price": 49.99,
+        "description": "Elevate your look with this elegant pink dress.",
+        "image": "./images/wishlist3.jpg"
+    },
+    {
+        "id": 4,
+        "product_name": "Luxurious Fitted Blouse",
+        "price": 29.99,
+        "description": "A fitted blouse that combines comfort and style.",
+        "image": "./images/luxurious_fitted_blouse.jpg"
+    },
+    {
+        "id": 5,
+        "product_name": "Floral Blouse",
+        "price": 59.99,
+        "description": "Embrace floral patterns with this chic blouse.",
+        "image": "./images/floral_blouse.jpg"
+    },
+    {
+        "id": 6,
+        "product_name": "Green Plaid Shirt",
+        "price": 29.99,
+        "description": "Get a casual and cool look with this green plaid shirt.",
+        "image": "./images/green_plaid_shirt.jpg"
+    },
+    {
+        "id": 7,
+        "product_name": "Oversized Sweater",
+        "price": 49.99,
+        "description": "Stay cozy and fashionable in this oversized sweater.",
+        "image": "./images/oversized_sweater.jpg"
+    },
+    {
+        "id": 8,
+        "product_name": "Striped Shirt",
+        "price": 29.99,
+        "description": "Classic striped shirt for a timeless look.",
+        "image": "./images/striped_shirt.jpg"
+    },
+    {
+        "id": 9,
+        "product_name": "Striped Sweater",
+        "price": 39.99,
+        "description": "Keep warm with this stylish striped sweater.",
+        "image": "./images/striped_sweater.jpg"
+    },
+    {
+        "id": 10,
+        "product_name": "White/Blue Plaid Shirt",
+        "price": 29.99,
+        "description": "A versatile plaid shirt in white and blue.",
+        "image": "./images/white_bue_plaid_shirt.jpg"
+    },
+    {
+        "id": 11,
+        "product_name": "White Turtleneck",
+        "price": 19.99,
+        "description": "A white turtleneck for a clean and sophisticated look.",
+        "image": "./images/white_turtleneck.jpg"
+    },
+    {
+        "id": 12,
+        "product_name": "Yellow Collared Shirt",
+        "price": 19.99,
+        "description": "Add a pop of color with this yellow collared shirt.",
+        "image": "./images/yellow_collared_shirt.jpg"
+    }
+]
