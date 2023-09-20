@@ -7,7 +7,23 @@
         "image": "./images/wishlist1.jpg",
         "sizes": ["Sizes", "XS", "S", "M", "L", "XL"],
         "colours": ["Colours", "Black"],
-        "rating": 4
+        "rating": 4,
+        "num_of_ratings": 294,
+        "reviews": [
+            {
+                "title": "Great Shirt",
+                "author": "John D.",
+                "rating": 4,
+                "description": "This black T-shirt is great. It's comfortable and looks good."
+            },
+            {
+                "title": "Quality Material",
+                "author": "Jane S.",
+                "rating": 5,
+                "description": "I love the quality of the cotton used in this shirt. It's soft and durable."
+            }
+        ],
+        "tags": ["shirt", "unisex"]
     },
     {
         "id": 2,
@@ -17,7 +33,23 @@
         "image": "./images/wishlist2.jpg",
         "sizes": ["Sizes", "XS", "S", "M", "L", "XL"],
         "colours": ["Colours", "Black"],
-        "rating": 5
+        "rating": 5,
+        "num_of_ratings": 153,
+        "reviews": [
+            {
+                "title": "Stylish and Warm",
+                "author": "Emily J.",
+                "rating": 5,
+                "description": "This leather jacket keeps me warm in the winter, and it looks stylish."
+            },
+            {
+                "title": "Great Buy",
+                "author": "Michael B.",
+                "rating": 5,
+                "description": "I'm really happy with this purchase. The quality is top-notch."
+            }
+        ],
+        "tags": ["jacket", "leather", "unisex"]
     },
     {
         "id": 3,
@@ -27,7 +59,23 @@
         "image": "./images/wishlist3.jpg",
         "sizes": ["Sizes", "XS", "S", "M", "L", "XL"],
         "colours": ["Colours", "Pink"],
-        "rating": 4
+        "rating": 4,
+        "num_of_ratings": 646,
+        "reviews": [
+            {
+                "title": "Beautiful Dress",
+                "author": "Sarah A.",
+                "rating": 4,
+                "description": "I wore this dress to a wedding, and I received so many compliments. It's beautiful."
+            },
+            {
+                "title": "Great Fit",
+                "author": "Danielle M.",
+                "rating": 5,
+                "description": "The fit of this dress is perfect. It's comfortable and looks amazing."
+            }
+        ],
+        "tags": ["dress", "womens"]
     },
     {
         "id": 4,
@@ -37,7 +85,23 @@
         "image": "./images/luxurious_fitted_blouse.jpg",
         "sizes": ["Sizes", "XS", "S", "M", "L (Out of Stock)", "XL"],
         "colours": ["Colours", "White", "Cream"],
-        "rating": 5
+        "rating": 5,
+        "num_of_ratings": 511,
+        "reviews": [
+            {
+                "title": "Amazing Quality",
+                "author": "Linda M.",
+                "rating": 5,
+                "description": "The quality of this blouse is unmatched. It's comfortable and looks amazing."
+            },
+            {
+                "title": "Perfect Fit",
+                "author": "Jamie L.",
+                "rating": 5,
+                "description": "I love how this blouse fits. It's a must-have in my wardrobe."
+            }
+        ],
+        "tags": ["shirt", "womens"]
     },
     {
         "id": 5,
@@ -47,7 +111,23 @@
         "image": "./images/floral_blouse.jpg",
         "sizes": ["Sizes", "XS", "S", "M", "L", "XL"],
         "colours": ["Colours", "Red", "Pink", "Yellow"],
-        "rating": 4
+        "rating": 4,
+        "num_of_ratings": 567,
+        "reviews": [
+            {
+                "title": "Beautiful Design",
+                "author": "Megan G.",
+                "rating": 4,
+                "description": "The floral design on this blouse is stunning. It's a great addition to my wardrobe."
+            },
+            {
+                "title": "Comfortable Fit",
+                "author": "Alexis T.",
+                "rating": 4,
+                "description": "I find this blouse to be really comfortable, and I like the way it looks on me."
+            }
+        ],
+        "tags": ["shirt", "womens"]
     },
     {
         "id": 6,
@@ -57,7 +137,23 @@
         "image": "./images/green_plaid_shirt.jpg",
         "sizes": ["Sizes", "XS", "S (Out of Stock)", "M", "L", "XL"],
         "colours": ["Colours", "Green", "Black"],
-        "rating": 5
+        "rating": 5,
+        "num_of_ratings": 530,
+        "reviews": [
+            {
+                "title": "Love the Plaid",
+                "author": "Sophia P.",
+                "rating": 5,
+                "description": "The green plaid design is awesome. It's a comfortable shirt for daily wear."
+            },
+            {
+                "title": "Great Style",
+                "author": "Ryan C.",
+                "rating": 5,
+                "description": "This shirt has great style. I wear it often, and it's become one of my favorites."
+            }
+        ],
+        "tags": ["shirt", "unisex"]
     },
     {
         "id": 7,
@@ -67,7 +163,23 @@
         "image": "./images/oversized_sweater.jpg",
         "sizes": ["Sizes", "XS", "S", "M", "L (Out of Stock)", "XL"],
         "colours": ["Colours", "Grey", "Black", "Cream"],
-        "rating": 4
+        "rating": 4,
+        "num_of_ratings": 1161,
+        "reviews": [
+            {
+                "title": "Cozy and Warm",
+                "author": "Ellie T.",
+                "rating": 4,
+                "description": "This sweater is incredibly cozy, and it keeps me warm during the winter months."
+            },
+            {
+                "title": "Fashionable",
+                "author": "Daniel W.",
+                "rating": 5,
+                "description": "I like the oversized style of this sweater. It's a fashionable choice for the cold season."
+            }
+        ],
+        "tags": ["sweater", "unisex"]
     },
     {
         "id": 8,
@@ -77,7 +189,23 @@
         "image": "./images/striped_shirt.jpg",
         "sizes": ["Sizes", "XS", "S", "M", "L", "XL"],
         "colours": ["Colours", "White", "Cream", "Grey"],
-        "rating": 5
+        "rating": 5,
+        "num_of_ratings": 1522,
+        "reviews": [
+            {
+                "title": "Timeless Style",
+                "author": "Olivia D.",
+                "rating": 5,
+                "description": "I love the classic striped style of this shirt. It's a versatile piece in my wardrobe."
+            },
+            {
+                "title": "Great Quality",
+                "author": "William A.",
+                "rating": 5,
+                "description": "The quality of this shirt is impressive. It's comfortable to wear and looks good."
+            }
+        ],
+        "tags": ["shirt", "unisex"]
     },
     {
         "id": 9,
@@ -87,7 +215,23 @@
         "image": "./images/striped_sweater.jpg",
         "sizes": ["Sizes", "XS", "S", "M (Out of Stock)", "L", "XL"],
         "colours": ["Colours", "Black", "Navy"],
-        "rating": 3
+        "rating": 3,
+        "num_of_ratings": 885,
+        "reviews": [
+            {
+                "title": "Stylish Design",
+                "author": "Sophie T.",
+                "rating": 3,
+                "description": "I like the style of this sweater, but I wish it was available in more sizes."
+            },
+            {
+                "title": "Comfortable",
+                "author": "Robert G.",
+                "rating": 3,
+                "description": "It's a comfortable sweater, but I was disappointed that my size was out of stock."
+            }
+        ],
+        "tags": ["sweater", "mens"]
     },
     {
         "id": 10,
@@ -97,7 +241,23 @@
         "image": "./images/white_blue_plaid_shirt.jpg",
         "sizes": ["Sizes", "XS", "S", "M", "L", "XL"],
         "colours": ["Colours", "White"],
-        "rating": 4
+        "rating": 4,
+        "num_of_ratings": 1883,
+        "reviews": [
+            {
+                "title": "Nice Shirt",
+                "author": "Liam T.",
+                "rating": 4,
+                "description": "I like the plaid pattern of this shirt. It's a nice addition to my wardrobe."
+            },
+            {
+                "title": "Good Fit",
+                "author": "Matthew L.",
+                "rating": 4,
+                "description": "The fit of this shirt is good, and it's comfortable to wear."
+            }
+        ],
+        "tags": ["shirt", "mens"]
     },
     {
         "id": 11,
@@ -107,7 +267,23 @@
         "image": "./images/white_turtleneck.jpg",
         "sizes": ["Sizes", "XS (Out of Stock)", "S", "M", "L", "XL"],
         "colours": ["Colours", "White"],
-        "rating": 5
+        "rating": 5,
+        "num_of_ratings": 1801,
+        "reviews": [
+            {
+                "title": "Elegant Style",
+                "author": "Maria R.",
+                "rating": 5,
+                "description": "I love the elegant style of this turtleneck. It's a versatile piece for my wardrobe."
+            },
+            {
+                "title": "Out of Stock Issue",
+                "author": "Thomas C.",
+                "rating": 4,
+                "description": "It's a great turtleneck, but I had trouble finding it in my size."
+            }
+        ],
+        "tags": ["shirt", "womens"]
     },
     {
         "id": 12,
@@ -117,6 +293,22 @@
         "image": "./images/yellow_collared_shirt.jpg",
         "sizes": ["Sizes", "XS", "S", "M", "L", "XL"],
         "colours": ["Colours", "Yellow"],
-        "rating": 4
+        "rating": 4,
+        "num_of_ratings": 2440,
+        "reviews": [
+            {
+                "title": "Vibrant Color",
+                "author": "Sophia B.",
+                "rating": 4,
+                "description": "The yellow color of this shirt is vibrant and eye-catching. I like it."
+            },
+            {
+                "title": "Good Quality",
+                "author": "David W.",
+                "rating": 4,
+                "description": "It's a good-quality shirt with a nice design. I'm satisfied with my purchase."
+            }
+        ],
+        "tags": ["shirt", "unisex"]
     }
 ]

@@ -57,6 +57,10 @@ const loadProductPage = async (productID) => {
             option.disabled = true;
             option.selected = true;
         }
+
+        if (size.includes("(Out of Stock)")) {
+            option.disabled = true;
+        }
         sizeFormSelect.appendChild(option);
     });
 
@@ -90,6 +94,31 @@ const loadProductPage = async (productID) => {
     const ratingDiv = document.createElement('div');
     ratingDiv.setAttribute('id', 'rating');
 
+    const sizingChart = document.createElement('h4');
+    sizingChart.id = 'sizing-chart-h4'
+    sizingChart.innerHTML = 'Sizing Chart'
+    ratingDiv.appendChild(sizingChart)
+
+    const sizingChartImage = document.createElement('img');
+    sizingChartImage.src = 'images/sizingchart.jpg'
+    sizingChartImage.classList.add('hidden');
+    sizingChartImage.id = 'sizing-chart-image'
+
+    sizingChart.addEventListener('click', () => {
+        const image = document.getElementById('sizing-chart-image');
+        if (image.style.display === 'none' || image.style.display === '') {
+            image.style.display = 'block';
+        } else {
+            image.style.display = 'none';
+        };
+    });
+
+    ratingDiv.appendChild(sizingChartImage)
+
+    const reviewTitle = document.createElement('h3')
+    reviewTitle.innerHTML = `Reviews (${product.num_of_ratings})`
+    ratingDiv.appendChild(reviewTitle)
+
     const stars = product.rating;
     for (let i = 0; i < stars; i++) {
         const star = document.createElement('span');
@@ -106,6 +135,63 @@ const loadProductPage = async (productID) => {
         ratingDiv.appendChild(star);
     }
 
+    // Reviews
+
+    const reviewsDiv = document.createElement('div');
+    reviewsDiv.setAttribute('id', 'reviews-container');
+
+    const reviews = product.reviews
+    reviews.forEach((review) => {
+        const reviewDiv = document.createElement('div');
+        reviewDiv.setAttribute('class', 'review')
+        reviewsDiv.appendChild(reviewDiv)
+
+        const reviewTitle = document.createElement('p');
+        reviewTitle.setAttribute('class', 'review-title')
+        reviewTitle.innerHTML = `"${review.title}" by ${review.author} | ${review.rating}/5`
+        reviewDiv.appendChild(reviewTitle)
+
+        const reviewDescription = document.createElement('p');
+        reviewDescription.setAttribute('class', 'review-description')
+        reviewDescription.innerHTML = `${review.description}`
+        reviewDiv.appendChild(reviewDescription)
+        
+    })
+
+    // Related
+    const relatedItems = products.filter((item) => {
+        return(
+            item.id !== product.id && item.tags.some((tag) => product.tags.includes(tag))
+        );
+    });   
+    
+
+    const relatedDiv = document.createElement('div');
+    relatedDiv.setAttribute('id', 'related-container');
+
+    const relatedTitle = document.createElement('h3')
+    relatedTitle.innerHTML = `Related`
+    relatedDiv.appendChild(relatedTitle)
+
+    const relatedItemsContainer = document.createElement('div');
+    relatedItemsContainer.setAttribute('id', 'items-container');
+    relatedDiv.appendChild(relatedItemsContainer)
+
+    relatedItems.forEach((item) => {
+        const relatedItem = document.createElement('div');
+        relatedItem.setAttribute('class', 'related-item');
+
+        const itemLink = document.createElement('a');
+        itemLink.href = `#/product?id=${item.id}`
+        relatedItem.appendChild(itemLink)
+
+        const itemImage = document.createElement('img');
+        itemImage.src = `${item.image}`;
+        itemLink.appendChild(itemImage);
+
+        relatedItemsContainer.appendChild(relatedItem)
+    })
+
     // Attach it all!
     productInfo.appendChild(productImage)
     productInfo.appendChild(productName)
@@ -114,6 +200,8 @@ const loadProductPage = async (productID) => {
     contentContainer.appendChild(productInfo);
     contentContainer.appendChild(dropdownDiv)
     contentContainer.appendChild(ratingDiv)
+    contentContainer.appendChild(reviewsDiv)
+    contentContainer.appendChild(relatedDiv)
 };
 
 export { loadProductPage };
