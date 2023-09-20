@@ -3,84 +3,120 @@
         "id": 1,
         "product_name": "Forever Black T-Shirt",
         "price": 19.99,
-        "description": "A classic black T-shirt that never goes out of style.",
-        "image": "./images/wishlist1.jpg"
+        "description": "A classic black T-shirt that never goes out of style. Made with high-quality cotton for ultimate comfort and durability.",
+        "image": "./images/wishlist1.jpg",
+        "sizes": ["Sizes", "XS", "S", "M", "L", "XL"],
+        "colours": ["Colours", "Black"],
+        "rating": 4
     },
     {
         "id": 2,
         "product_name": "Black Leather Jacket",
         "price": 59.99,
-        "description": "Stay warm and stylish with this black leather jacket.",
-        "image": "./images/wishlist2.jpg"
+        "description": "Stay warm and stylish with this black leather jacket. Crafted from premium leather and designed for both fashion and function.",
+        "image": "./images/wishlist2.jpg",
+        "sizes": ["Sizes", "XS", "S", "M", "L", "XL"],
+        "colours": ["Colours", "Black"],
+        "rating": 5
     },
     {
         "id": 3,
         "product_name": "Pink Dress",
         "price": 49.99,
-        "description": "Elevate your look with this elegant pink dress.",
-        "image": "./images/wishlist3.jpg"
+        "description": "Elevate your look with this elegant pink dress. Perfect for special occasions, it features a flattering silhouette and exquisite detailing.",
+        "image": "./images/wishlist3.jpg",
+        "sizes": ["Sizes", "XS", "S", "M", "L", "XL"],
+        "colours": ["Colours", "Pink"],
+        "rating": 4
     },
     {
         "id": 4,
         "product_name": "Luxurious Fitted Blouse",
         "price": 29.99,
-        "description": "A fitted blouse that combines comfort and style.",
-        "image": "./images/luxurious_fitted_blouse.jpg"
+        "description": "This specialty blouse is a best-seller. Made with award-winning cotton, this breathable cotton blouse is sure to be a staple in your wardrobe. Made with 100% Cotton.",
+        "image": "./images/luxurious_fitted_blouse.jpg",
+        "sizes": ["Sizes", "XS", "S", "M", "L (Out of Stock)", "XL"],
+        "colours": ["Colours", "White", "Cream"],
+        "rating": 5
     },
     {
         "id": 5,
         "product_name": "Floral Blouse",
         "price": 59.99,
-        "description": "Embrace floral patterns with this chic blouse.",
-        "image": "./images/floral_blouse.jpg"
+        "description": "Embrace floral patterns with this chic blouse. Its vibrant design and comfortable fit make it a must-have for any fashion-forward wardrobe.",
+        "image": "./images/floral_blouse.jpg",
+        "sizes": ["Sizes", "XS", "S", "M", "L", "XL"],
+        "colours": ["Colours", "Red", "Pink", "Yellow"],
+        "rating": 4
     },
     {
         "id": 6,
         "product_name": "Green Plaid Shirt",
         "price": 29.99,
-        "description": "Get a casual and cool look with this green plaid shirt.",
-        "image": "./images/green_plaid_shirt.jpg"
+        "description": "Get a casual and cool look with this green plaid shirt. Made from soft and breathable fabric, it's perfect for everyday wear.",
+        "image": "./images/green_plaid_shirt.jpg",
+        "sizes": ["Sizes", "XS", "S (Out of Stock)", "M", "L", "XL"],
+        "colours": ["Colours", "Green", "Black"],
+        "rating": 5
     },
     {
         "id": 7,
         "product_name": "Oversized Sweater",
         "price": 49.99,
-        "description": "Stay cozy and fashionable in this oversized sweater.",
-        "image": "./images/oversized_sweater.jpg"
+        "description": "Stay cozy and fashionable in this oversized sweater. Its relaxed fit and warm materials make it a go-to choice for chilly days.",
+        "image": "./images/oversized_sweater.jpg",
+        "sizes": ["Sizes", "XS", "S", "M", "L (Out of Stock)", "XL"],
+        "colours": ["Colours", "Grey", "Black", "Cream"],
+        "rating": 4
     },
     {
         "id": 8,
         "product_name": "Striped Shirt",
         "price": 29.99,
-        "description": "Classic striped shirt for a timeless look.",
-        "image": "./images/striped_shirt.jpg"
+        "description": "Classic striped shirt for a timeless look. Made with high-quality materials, this shirt is both comfortable and stylish.",
+        "image": "./images/striped_shirt.jpg",
+        "sizes": ["Sizes", "XS", "S", "M", "L", "XL"],
+        "colours": ["Colours", "White", "Cream", "Grey"],
+        "rating": 5
     },
     {
         "id": 9,
         "product_name": "Striped Sweater",
         "price": 39.99,
-        "description": "Keep warm with this stylish striped sweater.",
-        "image": "./images/striped_sweater.jpg"
+        "description": "Keep warm with this stylish striped sweater. Its modern design and soft texture make it a versatile addition to your wardrobe.",
+        "image": "./images/striped_sweater.jpg",
+        "sizes": ["Sizes", "XS", "S", "M (Out of Stock)", "L", "XL"],
+        "colours": ["Colours", "Black", "Navy"],
+        "rating": 3
     },
     {
         "id": 10,
         "product_name": "White/Blue Plaid Shirt",
         "price": 29.99,
-        "description": "A versatile plaid shirt in white and blue.",
-        "image": "./images/white_bue_plaid_shirt.jpg"
+        "description": "A versatile plaid shirt in white and blue. Made with a blend of premium fabrics, it offers both comfort and style.",
+        "image": "./images/white_blue_plaid_shirt.jpg",
+        "sizes": ["Sizes", "XS", "S", "M", "L", "XL"],
+        "colours": ["Colours", "White"],
+        "rating": 4
     },
     {
         "id": 11,
         "product_name": "White Turtleneck",
         "price": 19.99,
-        "description": "A white turtleneck for a clean and sophisticated look.",
-        "image": "./images/white_turtleneck.jpg"
+        "description": "A white turtleneck for a clean and sophisticated look. Crafted with attention to detail, it adds a touch of elegance to any outfit.",
+        "image": "./images/white_turtleneck.jpg",
+        "sizes": ["Sizes", "XS (Out of Stock)", "S", "M", "L", "XL"],
+        "colours": ["Colours", "White"],
+        "rating": 5
     },
     {
         "id": 12,
         "product_name": "Yellow Collared Shirt",
         "price": 19.99,
-        "description": "Add a pop of color with this yellow collared shirt.",
-        "image": "./images/yellow_collared_shirt.jpg"
+        "description": "Add a pop of color with this yellow collared shirt. Its vibrant hue and classic design make it a versatile choice for any occasion.",
+        "image": "./images/yellow_collared_shirt.jpg",
+        "sizes": ["Sizes", "XS", "S", "M", "L", "XL"],
+        "colours": ["Colours", "Yellow"],
+        "rating": 4
     }
 ]

@@ -54,10 +54,7 @@ nav a {
     margin: 5px;
 }
 
-
-/* #content {
-    background-color: bisque;
-} */
+/* HOME PAGE */
 
 #newest-styles, #exclusives, #catalogue {
     position: relative;
@@ -81,7 +78,7 @@ nav a {
 #wishlist-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 #wishlist {
@@ -118,4 +115,77 @@ nav a {
     font-size: 48px;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
+}
+
+/* PRODUCT PAGE */
+
+#product-info {
+    margin: 10px;
+}
+
+#product-image, #product-name, #product-price, #product-description {
+    text-align: center;
+}
+
+#product-image img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: black solid 2px;
+    margin: auto
+}
+
+#options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#size-container, #colour-container {
+    position: relative;
+    width: 175px;
+    height: 30px;
+    overflow: hidden;
+}
+
+#size-container select, #colour-container select {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 15px;
+    text-align: left;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+#size-container select::after, #colour-container select::after {
+    content: "\25BC";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+#size-container select::-ms-expand, #colour-container select::-ms-expand {
+    display: none;
+}
+
+
+#size-container select:hover, #colour-container select:hover {
+    background-color: #f0f0f0;
+}
+
+#rating {
+    text-align: center;
+}
+
+.star {
+    color: gold;
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+.star.empty {
+    color: darkgray
 }
