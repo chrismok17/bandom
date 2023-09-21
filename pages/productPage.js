@@ -40,6 +40,9 @@ const loadProductPage = async (productID) => {
     const dropdownDiv = document.createElement('div');
     dropdownDiv.setAttribute('id', 'options');
 
+    let selectedSize = 'S';
+    let selectedColour = 'White'
+
     // Size div for the size options
     const sizeDiv = document.createElement('div')
     sizeDiv.setAttribute('id', 'size-container')
@@ -64,6 +67,10 @@ const loadProductPage = async (productID) => {
         sizeFormSelect.appendChild(option);
     });
 
+    sizeFormSelect.addEventListener('change', () => {
+        selectedSize = sizeFormSelect.value;
+    });
+
     sizeDiv.appendChild(sizeFormSelect)
 
     // Colour div for the colours
@@ -85,9 +92,52 @@ const loadProductPage = async (productID) => {
             option.selected = true
         }
         colourFormSelect.appendChild(option);
-    })
+    });
+
+    colourFormSelect.addEventListener('change', () => {
+        selectedColour = colourFormSelect.value;
+    });
 
     colourDiv.appendChild(colourFormSelect)
+
+    // Cart div
+
+    const cartDiv = document.createElement('div');
+    cartDiv.id = 'add-to-cart'
+
+    const cartSVG = document.createElement('img');
+    cartSVG.src = 'svgs/add_to_cart.svg'
+    cartDiv.appendChild(cartSVG)
+
+    const checkmarkSVG = document.createElement('img');
+    checkmarkSVG.src = 'svgs/checkmark.svg'
+    checkmarkSVG.classList.add('hidden', 'checkmark')
+    cartDiv.appendChild(checkmarkSVG)
+
+    cartDiv.addEventListener('click', (e) => {
+        let cart = JSON.parse(sessionStorage.getItem('cart')) || [];
+
+        const newProduct = {
+            product_id: `${product.id}`,
+            product_image: `${product.image}`,
+            product_name: `${product.product_name}`,
+            product_price: `${product.price}`,
+            product_size: selectedSize,
+            product_colour: selectedColour
+        };
+
+        cart.push(newProduct);
+        sessionStorage.setItem('cart', JSON.stringify(cart))
+        
+        if (checkmarkSVG.style.display === 'none' || checkmarkSVG.style.display === '' || e.target === checkmarkSVG) {
+            checkmarkSVG.style.display = 'block';
+            cartSVG.style.display = 'none'
+        } else {
+            checkmarkSVG.style.display = 'none';
+        }
+    })
+
+    dropdownDiv.appendChild(cartDiv)
 
     // Rating!
 
