@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -54,11 +54,25 @@ nav a {
     margin: 5px;
 }
 
+
+.badge {
+    position: absolute;
+    top: 5;
+    right: 0;
+    background-color: red; /* Background color of the badge */
+    color: white; /* Text color of the badge */
+    border-radius: 50%; /* Make it a circle */
+    padding: 2px 6px; /* Adjust the padding for the badge */
+    margin-right: 7px;
+    font-size: 12px; /* Adjust the font size as needed */
+}
+
 /* HOME PAGE */
 
 #newest-styles, #exclusives, #catalogue {
     position: relative;
     margin: 10px;
+    cursor: pointer;
 }
 
 #newest-style-img, #exclusives-img {
@@ -344,7 +358,7 @@ nav a {
     border-bottom: 1px solid black;
 }
 
-#checkout-container {
+#checkout-container, #home-container, #catalogue-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -353,10 +367,84 @@ nav a {
     border-radius: 5px;
     background-color: #0e2544;
     height: 90px;
+    cursor: pointer;
 }
 
-#checkout-text {
+#checkout-text, #home-text, #catalogue-text {
     text-decoration: none;
     color: white;
     font-size: 48px;
+}
+
+#confirmation-msg {
+    margin: 75px;
+    text-align: center;
+}
+
+/* CATALOGUE */
+
+.product {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px;
+    height: 150px;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-image-container {
+    height: 75px;
+    width: 75px;
+    margin: 10px;
+}
+
+.product-image-container img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.product-info {
+    margin: 10px;
+    flex: 2;
+    font-size: 0.9rem;
+}
+
+.product-price {
+    margin: 10px;
+    flex: 0.5;
+    text-align: right;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.pagination button.prev-page {
+    height: 50px;
+    width: 100px;
+    background-color: #0e2544; /* Customize button styles */
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.pagination button.next-page {
+    height: 50px;
+    width: 100px;
+    background-color: #0e2544; /* Customize button styles */
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: auto;
 }

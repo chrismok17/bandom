@@ -20,6 +20,10 @@ const loadHomePage = () => {
     newestStylesText.innerHTML = '<h1>OUR NEWEST STYLES</h1>';
     newestStyles.appendChild(newestStylesText);
 
+    newestStyles.addEventListener('click', () => {
+        window.location.href = `#/catalogue`
+    })
+
     // Create Exclusives div
     const exclusives = document.createElement('div');
     exclusives.setAttribute('id', 'exclusives')
@@ -35,6 +39,11 @@ const loadHomePage = () => {
     exclusivesText.setAttribute('class', 'centered-text')
     exclusivesText.innerHTML = '<h1>BANDOM EXCLUSIVES</h1>';
     exclusives.appendChild(exclusivesText);
+
+    exclusives.addEventListener('click', () => {
+        window.location.href = `#/catalogue`
+    })
+
 
     // Create Wishlist div
     const wishlist = document.createElement('div');
