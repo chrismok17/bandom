@@ -1,8 +1,9 @@
 import { cartItems } from "../functions/renderCartItems.js";
+import { countCartItems } from '../functions/countCartItems.js';
 
 const loadCheckoutPage = () => {
     const contentContainer = document.getElementById('content');
-    document.title = 'Bandom | Cart';
+    document.title = 'Bandom | Checkout';
     contentContainer.innerHTML= '';
 
     const orderData = JSON.parse(sessionStorage.getItem('orderData'))
@@ -49,9 +50,40 @@ const loadCheckoutPage = () => {
     
 
     checkoutDiv.addEventListener('click', () => {
-        alert('Order Placed, Thank You!');
-        window.location.href = '#/';
-    })
+        contentContainer.innerHTML = '<h3 id="confirmation-msg">Purchase Confirmed, Thank You!</h3>';
+        sessionStorage.removeItem('cart');
+        countCartItems();
+
+        const homeDiv = document.createElement('div');
+        homeDiv.setAttribute('id', 'home-container');
+        contentContainer.appendChild(homeDiv)
+        
+        // Attach home and catalogue buttons
+        const homeText = document.createElement('div');
+        homeText.setAttribute('id', 'home-text');
+        homeText.innerHTML = 'Home';
+    
+        homeDiv.appendChild(homeText);
+        homeDiv.addEventListener('click', () => {
+            window.location.href = '#/'
+            }
+        )
+
+        const catalogueDiv = document.createElement('div');
+        catalogueDiv.setAttribute('id', 'catalogue-container');
+        contentContainer.appendChild(catalogueDiv)
+
+        const catalogueText = document.createElement('div');
+        catalogueText.setAttribute('id', 'catalogue-text');
+        catalogueText.innerHTML = 'Catalogue';
+    
+        catalogueDiv.appendChild(catalogueText);
+        catalogueDiv.addEventListener('click', () => {
+            window.location.href = '#/catalogue'
+            }
+        )
+        }
+    )
 
     contentContainer.appendChild(totalDiv)
     contentContainer.appendChild(userDiv)

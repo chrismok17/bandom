@@ -1,3 +1,5 @@
+import { countCartItems } from '../functions/countCartItems.js';
+
 const loadProductPage = async (productID) => {
     const contentContainer = document.getElementById('content');
     contentContainer.innerHTML= '';
@@ -128,6 +130,7 @@ const loadProductPage = async (productID) => {
 
         cart.push(newProduct);
         sessionStorage.setItem('cart', JSON.stringify(cart))
+        countCartItems();
         
         if (checkmarkSVG.style.display === 'none' || checkmarkSVG.style.display === '' || e.target === checkmarkSVG) {
             checkmarkSVG.style.display = 'block';
