@@ -65,21 +65,27 @@ const loadHomePage = () => {
     };
     
     // Create the Catalogue div
+    const catalogueLink = document.createElement('a');
+    catalogueLink.setAttribute('href', '#/catalogue');
+
     const catalogue = document.createElement('div');
     catalogue.setAttribute('id', 'catalogue');
-
+    catalogueLink.appendChild(catalogue)
+    
     // Attach the text and anchor
     const catalogueText = document.createElement('div');
-    catalogueText.setAttribute('class', 'centered-text')
+    catalogueText.setAttribute('class', 'centered-text');
+    catalogueText.innerHTML = '<h1>Catalogue</h1>';
+    
     catalogue.appendChild(catalogueText);
-
-    catalogueText.innerHTML = '<h1><a href="#/catalogue">Catalogue</a></h1>'
+    
+    // catalogue.appendChild(catalogueLink);
 
     // Add all created divs to the Content div
     contentContainer.appendChild(newestStyles)
     contentContainer.appendChild(exclusives)
     contentContainer.appendChild(wishlist)
-    contentContainer.appendChild(catalogue)
+    contentContainer.appendChild(catalogueLink)
 };
 
 export { loadHomePage };

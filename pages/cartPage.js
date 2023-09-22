@@ -1,69 +1,11 @@
+import { cartItems } from "../functions/renderCartItems.js";
+
 const loadCartPage = () => {
     const contentContainer = document.getElementById('content');
     document.title = 'Bandom | Cart';
     contentContainer.innerHTML= '';
 
-    const cartItems = JSON.parse(sessionStorage.getItem('cart')) || [];
-
-    const uniqueItems = {};
-    
-    let total = 0
-
-    cartItems.forEach((item) => {
-        const productID = item.product_id;
-
-        if (uniqueItems[productID]) {
-            uniqueItems[productID].quantity += 1;
-        } else {
-            uniqueItems[productID] = {
-                product: item,
-                quantity: 1
-            }
-        }
-
-        const itemPrice = parseFloat(item.product_price);
-        if (!isNaN(itemPrice)) {
-            total += itemPrice
-        };
-
-    });
-
-    for (const id in uniqueItems) {
-        const cartItem = uniqueItems[id];
-        const item = cartItem.product;
-        const quantity = cartItem.quantity;
-
-        const itemDiv = document.createElement('div');
-        itemDiv.classList.add('cart-item');
-
-        // Image
-        const itemImage = document.createElement('div');
-        itemImage.classList.add('item-image');
-        itemDiv.appendChild(itemImage);
-        const image = document.createElement('img');
-        image.src = item.product_image;
-        itemImage.appendChild(image);
-
-        // Name
-        const itemName = document.createElement('div');
-        itemName.classList.add('item-name');
-        itemName.innerHTML = `<h3>${quantity}x ${item.product_name}<h3>`
-        itemDiv.appendChild(itemName)
-
-        // Price
-        const itemPrice = document.createElement('div');
-        itemPrice.classList.add('item-price');
-        itemPrice.innerHTML = `<p>$${(quantity * item.product_price)}</p>`;
-        itemDiv.appendChild(itemPrice);
-
-        contentContainer.appendChild(itemDiv);
-    }
-
-    // Total
-    const totalPrice = document.createElement('div');
-    totalPrice.id = 'total-price';
-    totalPrice.innerHTML = `<h3>Total: $${total}<h3>`
-    contentContainer.appendChild(totalPrice)
+    cartItems()
 
     const formContainer = document.createElement('div');
     formContainer.id = 'form-container'
@@ -98,6 +40,13 @@ const loadCartPage = () => {
     postalCodeInput.setAttribute('type', 'text');
     postalCodeInput.setAttribute('name', 'postal-code');
 
+    // City field
+    const cityLabel = document.createElement('label');
+    cityLabel.textContent = 'City:';
+    const cityInput = document.createElement('input');
+    cityInput.setAttribute('type', 'text');
+    cityInput.setAttribute('name', 'city');
+
     // Province field
     const provinceLabel = document.createElement('label');
     provinceLabel.textContent = 'Province:';
@@ -111,6 +60,20 @@ const loadCartPage = () => {
     const countryInput = document.createElement('input');
     countryInput.setAttribute('type', 'text');
     countryInput.setAttribute('name', 'country');
+
+    // Autofill Address
+    const addressAutofill = document.createElement('div');
+    addressAutofill.classList.add('autofill')
+    addressAutofill.innerText = 'Auto Complete'
+
+    addressAutofill.addEventListener('click', () => {
+        nameInput.value = 'John Doe';
+        streetNameInput.value = '12345 ABC Street';
+        postalCodeInput.value = 'V0V 0V0';
+        cityInput.value = 'Vancouver';
+        provinceInput.value = 'BC';
+        countryInput.value = 'Canada';
+    });
 
     // Create a section for Payment Information
     const paymentInfoSection = document.createElement('div');
@@ -139,10 +102,42 @@ const loadCartPage = () => {
     nameOnCardInput.setAttribute('type', 'text');
     nameOnCardInput.setAttribute('name', 'name-on-card');
 
+    // Autofill Payment
+    const paymentAutofill = document.createElement('div');
+    paymentAutofill.classList.add('autofill')
+    paymentAutofill.innerText = 'Auto Complete'
+
+    paymentAutofill.addEventListener('click', () => {
+        cardNumberInput.value = '1234 5678 9101 1121';
+        cvvInput.value = '123';
+        nameOnCardInput.value = 'John Doe';
+    });
+
+
     // Create a submit button
     const submitButton = document.createElement('div');
     submitButton.id = 'submit-button'
     submitButton.innerHTML = 'Confirm';
+
+    submitButton.addEventListener('click', () => {
+        const totalAmount = document.getElementById('total-amount');
+        const totalAmountString = totalAmount.textContent;
+        
+        const formData = {
+            name: nameInput.value,
+            streetName: streetNameInput.value,
+            postalCode: postalCodeInput.value,
+            city: cityInput.value,
+            province: provinceInput.value,
+            country: countryInput.value,
+            cardNumber: cardNumberInput.value,
+            nameOnCard: nameOnCardInput.value,
+            totalPrice: parseFloat(totalAmountString.replace('Total: $', ''))
+        };
+
+        sessionStorage.setItem('orderData', JSON.stringify(formData));
+        window.location.href = '#/cart/checkout'
+    });
 
     // Append all the form elements to the form
     addressDetailsSection.appendChild(addressDetailsTitle);
@@ -152,10 +147,13 @@ const loadCartPage = () => {
     addressDetailsSection.appendChild(streetNameInput);
     addressDetailsSection.appendChild(postalCodeLabel);
     addressDetailsSection.appendChild(postalCodeInput);
+    addressDetailsSection.appendChild(cityLabel);
+    addressDetailsSection.appendChild(cityInput);
     addressDetailsSection.appendChild(provinceLabel);
     addressDetailsSection.appendChild(provinceInput);
     addressDetailsSection.appendChild(countryLabel);
     addressDetailsSection.appendChild(countryInput);
+    addressDetailsSection.appendChild(addressAutofill);
 
     paymentInfoSection.appendChild(paymentInfoTitle);
     paymentInfoSection.appendChild(cardNumberLabel);
@@ -164,6 +162,7 @@ const loadCartPage = () => {
     paymentInfoSection.appendChild(cvvInput);
     paymentInfoSection.appendChild(nameOnCardLabel);
     paymentInfoSection.appendChild(nameOnCardInput);
+    paymentInfoSection.appendChild(paymentAutofill);
 
     form.appendChild(addressDetailsSection);
     form.appendChild(paymentInfoSection);
