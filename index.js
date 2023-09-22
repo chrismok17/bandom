@@ -3,6 +3,7 @@ import { loadAccountPage } from './pages/accountPage.js';
 import { loadCartPage } from './pages/cartPage.js';
 import { loadCataloguePage } from './pages/cataloguePage.js';
 import { loadProductPage } from './pages/productPage.js';
+import { loadCheckoutPage } from './pages/checkoutPage.js'
 
 // Handles which page should be rendered based on url
 const handleRouteChange = () => {
@@ -20,6 +21,8 @@ const handleRouteChange = () => {
         case '/catalogue':
             loadCataloguePage();
             break
+        case '/cart/checkout':
+            loadCheckoutPage();
         default:
             if (route.startsWith('/product')) {
                 const params = new URLSearchParams(window.location.hash.split('?')[1]);
