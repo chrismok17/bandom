@@ -42,8 +42,8 @@ const loadProductPage = async (productID) => {
     const dropdownDiv = document.createElement('div');
     dropdownDiv.setAttribute('id', 'options');
 
-    let selectedSize = 'S';
-    let selectedColour = 'White'
+    let selectedSize = 'Sizes';
+    let selectedColour = 'Colours'
 
     // Size div for the size options
     const sizeDiv = document.createElement('div')
@@ -116,32 +116,41 @@ const loadProductPage = async (productID) => {
     checkmarkSVG.classList.add('hidden', 'checkmark')
     cartDiv.appendChild(checkmarkSVG)
 
+    const errorDiv = document.createElement('div');
+    errorDiv.classList.add('hidden', 'form-error');
+    errorDiv.innerHTML = '<p>Size/Colour not selected.</p>'
+    
+
     cartDiv.addEventListener('click', (e) => {
         let cart = JSON.parse(sessionStorage.getItem('cart')) || [];
-
-        const newProduct = {
-            product_id: `${product.id}`,
-            product_image: `${product.image}`,
-            product_name: `${product.product_name}`,
-            product_price: `${product.price}`,
-            product_size: selectedSize,
-            product_colour: selectedColour
-        };
-
-        cart.push(newProduct);
-        sessionStorage.setItem('cart', JSON.stringify(cart))
-        countCartItems();
-        
-        if (checkmarkSVG.style.display === 'none' || checkmarkSVG.style.display === '' || e.target === checkmarkSVG) {
-            checkmarkSVG.style.display = 'block';
-            cartSVG.style.display = 'none'
+        if (selectedColour === 'Colours' || selectedSize === 'Sizes') {
+            errorDiv.classList.remove('hidden');
         } else {
-            checkmarkSVG.style.display = 'none';
-        }
+            const newProduct = {
+                product_id: `${product.id}`,
+                product_image: `${product.image}`,
+                product_name: `${product.product_name}`,
+                product_price: `${product.price}`,
+                product_size: selectedSize,
+                product_colour: selectedColour
+            };
+            cart.push(newProduct);
+            sessionStorage.setItem('cart', JSON.stringify(cart))
+            countCartItems();
+            
+            cartSVG.classList.add('hidden');
+            checkmarkSVG.classList.remove('hidden');
+
+            setTimeout(() => {
+                cartSVG.classList.remove('hidden');
+                checkmarkSVG.classList.add('hidden');
+                }, 2000);
+            }
+        
+        
     })
 
     dropdownDiv.appendChild(cartDiv)
-
     // Rating!
 
     const ratingDiv = document.createElement('div');
@@ -252,6 +261,7 @@ const loadProductPage = async (productID) => {
     productInfo.appendChild(productDescription)
     contentContainer.appendChild(productInfo);
     contentContainer.appendChild(dropdownDiv)
+    contentContainer.appendChild(errorDiv)
     contentContainer.appendChild(ratingDiv)
     contentContainer.appendChild(reviewsDiv)
     contentContainer.appendChild(relatedDiv)

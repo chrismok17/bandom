@@ -50,7 +50,7 @@ const cartItems = () => {
         // Price
         const itemPrice = document.createElement('div');
         itemPrice.classList.add('item-price');
-        itemPrice.innerHTML = `<p>$${(quantity * item.product_price)}</p>`;
+        itemPrice.innerHTML = `<p>$${(quantity * item.product_price).toFixed(2)}</p>`;
         itemDiv.appendChild(itemPrice);
 
         contentContainer.appendChild(itemDiv);
@@ -59,7 +59,7 @@ const cartItems = () => {
     // Total
     const totalPrice = document.createElement('div');
     totalPrice.id = 'total-price';
-    totalPrice.innerHTML = `<h3 id="total-amount">Total: $${total}<h3>`
+    totalPrice.innerHTML = `<h3 id="total-amount">Total: $${total.toFixed(2)}<h3>`
     contentContainer.appendChild(totalPrice)
 }
 

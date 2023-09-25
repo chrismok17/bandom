@@ -1,4 +1,4 @@
-const loadCataloguePage = async (page = 1, itemsPerPage = 5) => {
+const loadCataloguePage = async (page = 1, itemsPerPage = 6) => {
     const contentContainer = document.getElementById('content');
     document.title = 'Bandom | Catalogue';
     contentContainer.innerHTML= '';
@@ -10,6 +10,9 @@ const loadCataloguePage = async (page = 1, itemsPerPage = 5) => {
     const endIndex = startIndex + itemsPerPage;
 
     const productsToDisplay = products.slice(startIndex, endIndex);
+
+    const productsDiv = document.createElement('div');
+    productsDiv.id = 'products-container';
 
     productsToDisplay.forEach((product) => {
         const productDiv = document.createElement('div');
@@ -38,8 +41,10 @@ const loadCataloguePage = async (page = 1, itemsPerPage = 5) => {
             window.location.href = `#/product?id=${product.id}`
         })
 
-        contentContainer.appendChild(productDiv);
+        productsDiv.appendChild(productDiv);
     });
+
+    contentContainer.appendChild(productsDiv)
 
     addPaginationControls(page, itemsPerPage, products.length);
 
