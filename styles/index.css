@@ -1,0 +1,68 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 48px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+#bandom-home {
+    font-family: 'Moon Dance';
+    margin: 0px 30px 0px 0px;
+    font-size: 50px;
+    color: black;
+}
+
+p {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#nav {
+    background-color: #afcbee;
+    color: white;
+    width: 100%;
+    height: 75px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    float: right;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-svg {
+    margin: 5px;
+}
+
+
+.badge {
+    position: absolute;
+    top: 5;
+    right: 0;
+    background-color: red; /* Background color of the badge */
+    color: white; /* Text color of the badge */
+    border-radius: 50%; /* Make it a circle */
+    padding: 2px 6px; /* Adjust the padding for the badge */
+    margin-right: 7px;
+    font-size: 12px; /* Adjust the font size as needed */
+}

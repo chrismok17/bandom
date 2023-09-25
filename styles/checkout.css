@@ -1,0 +1,45 @@
+#total-container {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+
+#subtotals {
+    text-align: left;
+}
+
+#prices {
+    text-align: right;
+}
+
+#user-details {
+    margin: 10px;
+    text-align: left;
+    border-bottom: 1px solid black;
+}
+
+#checkout-container, #home-container, #catalogue-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 10px 10px 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #0e2544;
+    height: 90px;
+    cursor: pointer;
+}
+
+#checkout-text, #home-text, #catalogue-text {
+    text-decoration: none;
+    color: white;
+    font-size: 48px;
+}
+
+#confirmation-msg {
+    margin: 75px;
+    text-align: center;
+}
