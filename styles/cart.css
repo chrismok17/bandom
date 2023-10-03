@@ -1,40 +1,65 @@
+input {
+    border-radius: 10px;
+}
+
 .cart-item {
     border: 2px solid black;
     margin: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
-.cart-item div {
+/* .cart-item div {
     margin: 10px;
-}
+} */
 
 .item-image {
     display: flex;
     align-items: center;
-    margin: 10px;
+    margin: 5px;
 }
 
 .item-name {
     width: 200px;
     height: 100%;
-    margin: 10px;
+    margin: 5px;
     text-align: left;
     display: flex;
     align-items: center;
 }
 
 .item-price {
+    margin: 5px;
     text-align: right;
-    margin: 10px;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+}
+
+.item-price p {
+    margin: 0;
+    padding: 0;
+}
+
+.quantity-controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px;
+}
+
+.quantity-controls button {
+    margin: 5px;
+    height: 25px;
 }
 
 #total-price {
     margin: 10px;
     text-align: right;
+    padding: 0;
 }
 
 #form-container {

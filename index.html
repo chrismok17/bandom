@@ -17,25 +17,34 @@
 <body>
     <div>
         <nav id="nav">
-            <ul>
-                <li>
+            <div class="nav-column">
+                <div>
+                    <img id="back-button" class="hidden nav-svg" src="svgs/back.svg">
+                </div>
+            </div>
+            <div class="nav-column">
+                <div>
                     <a href="#/">
                         <h2 id="bandom-home">Bandom</h2>
                     </a>
-                </li>
-                <li>
+                </div>
+            </div>
+            <div class="nav-column">
+                
+                <div>
                     <a href="#/">
                         <img class="nav-svg" src="svgs/account.svg">
                     </a>
-                </li>
-                <li>
+                </div>
+                <div>
                     <a href="#/cart" id="cart-link">
                         <img class="nav-svg" src="svgs/cart.svg">
                         <span id="cart-badge" class="badge hidden">0</span> 
                     </a>
-                </li>
-            </ul>
+                </div>
+            </div>
         </nav>
+        
     </div>
     
     <div id="content"></div>

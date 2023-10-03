@@ -24,10 +24,41 @@ p {
 }
 
 #nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px; /* Adjust the padding as needed */
+    height: 75px;
     background-color: #afcbee;
     color: white;
-    width: 100%;
-    height: 75px;
+}
+
+.nav-column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-column:first-child {
+    justify-content: flex-start; /* Align the back button to the left */
+}
+
+.nav-column:last-child {
+    justify-content: flex-end; /* Align the cart items to the right */
+}
+
+.nav-svg {
+    width: 24px; /* Adjust the icon width as needed */
+    height: 24px; /* Adjust the icon height as needed */
+    margin: 0 10px; /* Add spacing between items */
+}
+
+#cart-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333; /* Adjust the color as needed */
+    font-weight: bold;
 }
 
 nav ul {
@@ -50,10 +81,11 @@ nav a {
     color: black;
 }
 
-.nav-svg {
-    margin: 5px;
+#back-button{
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
 }
-
 
 .badge {
     position: absolute;
