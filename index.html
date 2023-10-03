@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/productDetails.css">
+    <link rel="stylesheet" href="/styles/cart.css">
+    <link rel="stylesheet" href="/styles/checkout.css">
+    <link rel="stylesheet" href="/styles/catalogue.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&family=Moon+Dance&family=Roboto:ital,wght@1,700&display=swap" rel="stylesheet">
@@ -12,25 +17,34 @@
 <body>
     <div>
         <nav id="nav">
-            <ul>
-                <li>
+            <div class="nav-column">
+                <div>
+                    <img id="back-button" class="hidden nav-svg" src="svgs/back.svg">
+                </div>
+            </div>
+            <div class="nav-column">
+                <div>
                     <a href="#/">
                         <h2 id="bandom-home">Bandom</h2>
                     </a>
-                </li>
-                <li>
-                    <a href="#/account">
+                </div>
+            </div>
+            <div class="nav-column">
+                
+                <div>
+                    <a href="#/">
                         <img class="nav-svg" src="svgs/account.svg">
                     </a>
-                </li>
-                <li>
+                </div>
+                <div>
                     <a href="#/cart" id="cart-link">
                         <img class="nav-svg" src="svgs/cart.svg">
-                        <span id="cart-badge" class="badge">0</span> 
+                        <span id="cart-badge" class="badge hidden">0</span> 
                     </a>
-                </li>
-            </ul>
+                </div>
+            </div>
         </nav>
+        
     </div>
     
     <div id="content"></div>

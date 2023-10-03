@@ -1,4 +1,4 @@
-import { cartItems } from "../functions/renderCartItems.js";
+import { renderCartItems } from "../functions/renderCartItems.js";
 import { countCartItems } from '../functions/countCartItems.js';
 
 const loadCheckoutPage = () => {
@@ -12,7 +12,7 @@ const loadCheckoutPage = () => {
     const shipping = 5.00
     const total = orderData.totalPrice + tax + shipping
 
-    cartItems();
+    renderCartItems();
 
     const totalsDiv = document.getElementById('total-price');
     totalsDiv.classList.add('hidden')

@@ -1,11 +1,11 @@
-import { cartItems } from "../functions/renderCartItems.js";
+import { renderCartItems } from "../functions/renderCartItems.js";
 
 const loadCartPage = () => {
     const contentContainer = document.getElementById('content');
     document.title = 'Bandom | Cart';
     contentContainer.innerHTML= '';
 
-    cartItems()
+    renderCartItems()
 
     const formContainer = document.createElement('div');
     formContainer.id = 'form-container'

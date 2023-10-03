@@ -1,0 +1,99 @@
+input {
+    border-radius: 10px;
+}
+
+.cart-item {
+    border: 2px solid black;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* .cart-item div {
+    margin: 10px;
+} */
+
+.item-image {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
+
+.item-name {
+    width: 200px;
+    height: 100%;
+    margin: 5px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.item-price {
+    margin: 5px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-price p {
+    margin: 0;
+    padding: 0;
+}
+
+.quantity-controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px;
+}
+
+.quantity-controls button {
+    margin: 5px;
+    height: 25px;
+}
+
+#total-price {
+    margin: 10px;
+    text-align: right;
+    padding: 0;
+}
+
+#form-container {
+    margin: 10px;
+}
+
+#address-section, #payment-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.autofill {
+    margin-top: 5px;
+    padding: 5px;
+    width: 125px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border: 1px solid black;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#submit-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    width: 100%;
+    height: 90px;
+    background-color: #0e2544;
+    text-decoration: none;
+    color: white;
+    font-size: 48px;
+    border-radius: 5px;
+    cursor: pointer;
+}
