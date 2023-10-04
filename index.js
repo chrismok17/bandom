@@ -23,7 +23,32 @@ const handleRouteChange = () => {
             backButton.classList.remove('hidden'); // Show the back button on other pages
             break;
         case '/catalogue':
-            loadCataloguePage();
+            let resizeTimeout;
+            const handleResize = () => {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(() => {
+                    // Call your function here (e.g., loadCataloguePage)
+                    const screenWidth = window.innerWidth;
+                    let itemsPerPage;
+            
+                    if (screenWidth < 768) {
+                        itemsPerPage = 6; // For mobile screens (< 768px)
+                    } else if (screenWidth >= 768 && screenWidth <= 1000) {
+                        itemsPerPage = 8; // For medium screens (768px to 1000px)
+                    } else {
+                        itemsPerPage = 12; // For large screens (> 1000px)
+                    }
+            
+                    // Call your loadCataloguePage function with the updated itemsPerPage value
+                    loadCataloguePage(1, itemsPerPage);
+                }, 300); // Adjust the delay (in milliseconds) as needed
+            };
+            window.removeEventListener('resize', handleResize);
+
+            handleResize();
+
+            window.addEventListener('resize', handleResize);
+
             backButton.classList.remove('hidden'); // Show the back button on other pages
             break;
         case '/cart/checkout':

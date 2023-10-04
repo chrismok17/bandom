@@ -14,6 +14,10 @@ const loadCheckoutPage = () => {
 
     renderCartItems();
 
+    const checkoutPage = document.createElement('div');
+    checkoutPage.id = 'checkout-page';
+    contentContainer.appendChild(checkoutPage);
+
     const totalsDiv = document.getElementById('total-price');
     totalsDiv.classList.add('hidden')
 
@@ -85,9 +89,9 @@ const loadCheckoutPage = () => {
         }
     )
 
-    contentContainer.appendChild(totalDiv)
-    contentContainer.appendChild(userDiv)
-    contentContainer.appendChild(checkoutDiv)
+    checkoutPage.appendChild(totalDiv)
+    checkoutPage.appendChild(userDiv)
+    checkoutPage.appendChild(checkoutDiv)
 }
 
 export { loadCheckoutPage };
