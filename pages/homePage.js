@@ -4,6 +4,10 @@ const loadHomePage = () => {
     document.title = 'Bandom | Home';
     contentContainer.innerHTML= '';
 
+    // Create the home-container div to encapsulate elements
+    const homeContainer = document.createElement('div');
+    homeContainer.setAttribute('id', 'home-div');
+
     // Create the Newest Styles div
     const newestStyles = document.createElement('div');
     newestStyles.setAttribute('id', 'newest-styles')
@@ -76,6 +80,7 @@ const loadHomePage = () => {
     // Create the Catalogue div
     const catalogueLink = document.createElement('a');
     catalogueLink.setAttribute('href', '#/catalogue');
+    catalogueLink.id = 'catalogue-div';
 
     const catalogue = document.createElement('div');
     catalogue.setAttribute('id', 'catalogue');
@@ -91,10 +96,11 @@ const loadHomePage = () => {
     // catalogue.appendChild(catalogueLink);
 
     // Add all created divs to the Content div
-    contentContainer.appendChild(newestStyles)
-    contentContainer.appendChild(exclusives)
-    contentContainer.appendChild(wishlist)
-    contentContainer.appendChild(catalogueLink)
+    homeContainer.appendChild(newestStyles);
+    homeContainer.appendChild(exclusives);
+    homeContainer.appendChild(wishlist);
+    homeContainer.appendChild(catalogueLink);
+    contentContainer.appendChild(homeContainer);
 };
 
 export { loadHomePage };
