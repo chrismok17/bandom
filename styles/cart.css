@@ -11,10 +11,6 @@ input {
     align-items: center;
 }
 
-/* .cart-item div {
-    margin: 10px;
-} */
-
 .item-image {
     display: flex;
     align-items: center;
@@ -54,6 +50,18 @@ input {
 .quantity-controls button {
     margin: 5px;
     height: 25px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0e2544;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    border: none;
 }
 
 #total-price {
@@ -64,6 +72,13 @@ input {
 
 #form-container {
     margin: 10px;
+}
+
+input, textarea {
+    border: none;
+    outline: none;
+    background-color: #e6e5e5;
+    height: 20px;
 }
 
 #address-section, #payment-section {
@@ -96,4 +111,16 @@ input {
     font-size: 48px;
     border-radius: 5px;
     cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    #cart-page, .cart-item, #total-price {
+        min-width: 25%;
+        max-width: 50%;
+        margin: auto;
+    }
+
+    .cart-item {
+        margin-top: 20px;
+    }
 }

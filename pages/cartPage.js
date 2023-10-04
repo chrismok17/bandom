@@ -9,6 +9,10 @@ const loadCartPage = () => {
 
     const formContainer = document.createElement('div');
     formContainer.id = 'form-container'
+
+    const cartPage = document.createElement('div');
+    cartPage.id = 'cart-page';
+    contentContainer.appendChild(cartPage);
     
     // Create a form element
     const form = document.createElement('form');
@@ -170,7 +174,7 @@ const loadCartPage = () => {
 
     // Append the form to the container
     formContainer.appendChild(form);
-    contentContainer.appendChild(formContainer)
+    cartPage.appendChild(formContainer)
 };
 
 export { loadCartPage };

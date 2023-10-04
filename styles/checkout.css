@@ -43,3 +43,18 @@
     margin: 75px;
     text-align: center;
 }
+
+@media (min-width: 768px) {
+    #checkout-page {
+        margin: auto;
+        min-width: 25%;
+        max-width: 50%;
+    }
+
+    #home-container, #catalogue-container {
+        margin: auto;
+        min-width: 25%;
+        max-width: 50%;
+        margin-bottom: 20px;
+    }
+}

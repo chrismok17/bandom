@@ -11,6 +11,10 @@ const loadProductPage = async (productID) => {
 
     document.title = `Bandom | ${product.product_name}`;
 
+    const productPage = document.createElement('div');
+    productPage.id = 'product-page';
+    contentContainer.appendChild(productPage)
+
     // Product Div
     const productInfo = document.createElement('div');
     productInfo.setAttribute('id', 'product-info');
@@ -259,12 +263,12 @@ const loadProductPage = async (productID) => {
     productInfo.appendChild(productName)
     productInfo.appendChild(productPrice)
     productInfo.appendChild(productDescription)
-    contentContainer.appendChild(productInfo);
-    contentContainer.appendChild(dropdownDiv)
-    contentContainer.appendChild(errorDiv)
-    contentContainer.appendChild(ratingDiv)
-    contentContainer.appendChild(reviewsDiv)
-    contentContainer.appendChild(relatedDiv)
+    productPage.appendChild(productInfo);
+    productPage.appendChild(dropdownDiv)
+    productPage.appendChild(errorDiv)
+    productPage.appendChild(ratingDiv)
+    productPage.appendChild(reviewsDiv)
+    productPage.appendChild(relatedDiv)
 };
 
 export { loadProductPage };
