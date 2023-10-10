@@ -89,7 +89,7 @@ nav a {
 
 .badge {
     position: absolute;
-    top: 5;
+    margin-bottom: 15px;
     right: 0;
     background-color: red; /* Background color of the badge */
     color: white; /* Text color of the badge */
