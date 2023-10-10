@@ -99,7 +99,10 @@ const renderCartItems = () => {
             updateTotalPrice(); // Update the total price when an item is added
         });
         itemDiv.appendChild(itemPriceDiv);
-        itemDiv.appendChild(quantityControls); // Append quantityControls here
+        if (window.location.hash.substring(1) == '/cart') {
+            itemDiv.appendChild(quantityControls); // Append quantityControls here
+        }
+        
         
         
         contentContainer.appendChild(itemDiv);
